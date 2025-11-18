@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { ArticleForm } from '../article-form/article-form';
+import { Comments } from '../comments/comments';
 
 
 @Component({
@@ -82,6 +83,15 @@ export class Articles {
       if (result) {
         this.loadArticles();
       }
+    });
+  }
+
+    openCommentsModal(article: any): void {
+    this.unreadCommentsCount[article._id] = 0;
+
+    this.dialog.open(Comments, {
+      width: '600px',
+      data: { articleId: article._id }
     });
   }
 }

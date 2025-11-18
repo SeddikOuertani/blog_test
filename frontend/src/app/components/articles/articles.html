@@ -33,16 +33,12 @@
       <ng-container matColumnDef="comments">
         <th mat-header-cell *matHeaderCellDef> 💬 Commentaires </th>
         <td mat-cell *matCellDef="let article">
-          <!-- <button mat-icon-button color="primary" (click)="openCommentsModal(article)">
+          <button mat-icon-button color="primary" (click)="openCommentsModal(article)">
             <mat-icon
-              matBadge="{{ getUnreadCount(article._id) }}"
-              [matBadgeHidden]="getUnreadCount(article._id) === 0"
-              matBadgeColor="warn"
-              [matBadgeOverlap]="false"
             >
               chat
             </mat-icon>
-          </button> -->
+          </button>
         </td>
       </ng-container>
 
